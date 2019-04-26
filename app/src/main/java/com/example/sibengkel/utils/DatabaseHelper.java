@@ -174,4 +174,10 @@ public class DatabaseHelper extends SQLiteOpenHelper implements Database {
         db.close();
         return bookings;
     }
+
+    public Cursor getUserData(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("SELECT * FROM TABLE_USERS", null);
+        return res;
+    }
 }

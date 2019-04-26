@@ -29,7 +29,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="sibengkel" />
+        android:text="sibengkel"
+        android:id="@+id/txtNama"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -39,7 +40,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="sibengkel@sibengkel.com"/>
+        android:text="sibengkel@sibengkel.com"
+        android:id="@+id/txtEmail"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -50,7 +52,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:text="Password"/>
+        android:text="Password"
+        android:id="@+id/txtPassword"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -60,7 +63,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Jalan Perbengkelan no 29"/>
+        android:text="Jalan Perbengkelan no 29"
+        android:id="@+id/txtAlamat"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -70,7 +74,21 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="081214511111"/>
+        android:text="081214511111"
+        android:id="@+id/txtNoHp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SAVE"
+        android:id="@+id/buttonSaveProfile"/>
+
+    <Button
+        android:id="@+id/button_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="LOGOUT"/>
 
 
 

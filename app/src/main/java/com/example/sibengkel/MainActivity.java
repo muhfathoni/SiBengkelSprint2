@@ -1,7 +1,5 @@
 package com.example.sibengkel;
 
-import android.app.ListActivity;
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,15 +9,9 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 import com.example.sibengkel.controllers.BookController;
@@ -28,7 +20,6 @@ import com.example.sibengkel.utils.Database;
 import com.example.sibengkel.utils.DatabaseHelper;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import static android.widget.LinearLayout.VERTICAL;
@@ -36,7 +27,8 @@ import static android.widget.LinearLayout.VERTICAL;
 public class MainActivity extends AppCompatActivity {
 
     TextView txt_profile_name;
-    Button btn_logout;
+    Button button_booking_list;
+    Button btn_setting;
 
     SharedPreferences sharedpreferences;
     Intent intent;
@@ -56,24 +48,46 @@ public class MainActivity extends AppCompatActivity {
         txt_profile_name = (TextView) findViewById(R.id.txt_profile_name);
         txt_profile_name.setText(getIntent().getExtras().get("name").toString());
 
-        btn_logout = (Button) findViewById(R.id.btn_logout);
-        btn_logout.setOnClickListener(new View.OnClickListener() {
+
+
+//        btn_logout = (Button) findViewById(R.id.btn_logout);
+//        btn_logout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                logout();
+//            }
+//        });
+
+        button_booking_list = (Button) findViewById(R.id.button_booking_list);
+        button_booking_list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                logout();
+                intent = new Intent(MainActivity.this, BookingList.class);
+                intent.putExtra("email", getIntent().getExtras().get("email").toString());
+
+                startActivity(intent);
+            }
+        });
+
+        btn_setting = (Button)findViewById(R.id.btn_setting);
+        btn_setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(MainActivity.this, SettingActivity.class);
+                startActivity(intent);
             }
         });
 
         db = new DatabaseHelper(this);
 
 //        listBookings(db.allBookings());
-        recyclerView = (RecyclerView) findViewById(R.id.rv_bookings);
-        adapter = new BookingAdapter(this, db.allBookings(getIntent().getExtras().get("email").toString()));
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        DividerItemDecoration decoration = new DividerItemDecoration(getApplicationContext(), VERTICAL);
-        recyclerView.addItemDecoration(decoration);        recyclerView.setAdapter(adapter);
+//        recyclerView = (RecyclerView) findViewById(R.id.rv_bookings);
+//        adapter = new BookingAdapter(this, db.allBookings(getIntent().getExtras().get("email").toString()));
+//        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+//        recyclerView.setLayoutManager(mLayoutManager);
+//        recyclerView.setItemAnimator(new DefaultItemAnimator());
+//        DividerItemDecoration decoration = new DividerItemDecoration(getApplicationContext(), VERTICAL);
+//        recyclerView.addItemDecoration(decoration);        recyclerView.setAdapter(adapter);
 
 
 //        Log.d("book",String.valueOf(values));
@@ -87,23 +101,23 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void logout() {
-        sharedpreferences = getSharedPreferences(
-                LoginActivity.my_shared_preferences, Context.MODE_PRIVATE);
-
-        SharedPreferences.Editor editor = sharedpreferences.edit();
-        editor.putBoolean(LoginActivity.session_status, false);
-        editor.putString(LoginActivity.TAG_ID, null);
-        editor.putString(LoginActivity.TAG_EMAIL, null);
-        editor.putString(LoginActivity.TAG_NAME, null);
-        editor.putString(LoginActivity.TAG_PHONE, null);
-        editor.putString(LoginActivity.TAG_ADDRESS, null);
-        editor.commit();
-
-        intent = new Intent(MainActivity.this, LoginActivity.class);
-        finish();
-        startActivity(intent);
-    }
+//    private void logout() {
+//        sharedpreferences = getSharedPreferences(
+//                LoginActivity.my_shared_preferences, Context.MODE_PRIVATE);
+//
+//        SharedPreferences.Editor editor = sharedpreferences.edit();
+//        editor.putBoolean(LoginActivity.session_status, false);
+//        editor.putString(LoginActivity.TAG_ID, null);
+//        editor.putString(LoginActivity.TAG_EMAIL, null);
+//        editor.putString(LoginActivity.TAG_NAME, null);
+//        editor.putString(LoginActivity.TAG_PHONE, null);
+//        editor.putString(LoginActivity.TAG_ADDRESS, null);
+//        editor.commit();
+//
+//        intent = new Intent(MainActivity.this, LoginActivity.class);
+//        finish();
+//        startActivity(intent);
+//    }
 
     private void initiateCoreApp() {
         Database database = new DatabaseHelper(this);
