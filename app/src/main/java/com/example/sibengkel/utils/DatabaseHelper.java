@@ -127,6 +127,18 @@ public class DatabaseHelper extends SQLiteOpenHelper implements Database {
         }
     }
 
+    public boolean updateData(String id, String name, String address, String email, String phone, String password){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("name",name);
+        contentValues.put("address",address);
+        contentValues.put("email",email);
+        contentValues.put("phone",phone);
+        contentValues.put("password",password);
+        db.update("tbl_users", contentValues, "_id = ?",new String[] { id });
+        return true;
+    }
+
     @Override
     public boolean delete(String tableName, int id) {
         try {
