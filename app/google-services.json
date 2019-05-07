@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "26143658754",
+    "firebase_url": "https://sibengkel-758d9.firebaseio.com",
+    "project_id": "sibengkel-758d9",
+    "storage_bucket": "sibengkel-758d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26143658754:android:b10bdc47aae1b5b7",
+        "android_client_info": {
+          "package_name": "com.example.sibengkel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "26143658754-13gv9ue4647a8de9mcbc1gqmber1u5sr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sibengkel",
+            "certificate_hash": "2efd260059f7286c902cefa667307958f6fd9007"
+          }
+        },
+        {
+          "client_id": "26143658754-u736b96kothnhf2g9fj1uvddhpohq5ei.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCGmsDSHARfWLk4jImhTlUuSWrN9rlSaQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "26143658754-u736b96kothnhf2g9fj1uvddhpohq5ei.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

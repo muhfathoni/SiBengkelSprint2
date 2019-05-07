@@ -119,6 +119,9 @@ public class MainActivity extends AppCompatActivity {
 //        startActivity(intent);
 //    }
 
+    public void pembelian(View view){
+        startActivity(new Intent(this, PembelianActivity.class));
+    }
     private void initiateCoreApp() {
         Database database = new DatabaseHelper(this);
         BookController.setDatabase(database);

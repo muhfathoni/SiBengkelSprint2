@@ -1,0 +1,38 @@
+{
+  "barangs" : {
+    "110001" : {
+      "foto" : "https://firebasestorage.googleapis.com/v0/b/sibengkel-758d9.appspot.com/o/knalpot_kawahara_kapsul_knalpot_pdk_kapsul_.jpg?alt=media",
+      "harga" : "1500000",
+      "kategori" : "Exhaust",
+      "namaBarang" : "Kawahara Exhaust"
+    },"120001" : {
+      "foto" : "https://firebasestorage.googleapis.com/v0/b/sibengkel-758d9.appspot.com/o/elders%20company%20gloves.jpg?alt=media",
+      "harga" : "690000",
+      "kategori" : "Gloves",
+      "namaBarang" : "Elders Company Gloves Hornet"
+    },"130001" : {
+      "foto" : "https://firebasestorage.googleapis.com/v0/b/sibengkel-758d9.appspot.com/o/Zulu-StGermain-White-Chrome-34-1.jpg?alt=media",
+      "harga" : "500000",
+      "kategori" : "Helmet",
+      "namaBarang" : "Zulu Helmet"
+    },"140001" : {
+      "foto" : "https://firebasestorage.googleapis.com/v0/b/sibengkel-758d9.appspot.com/o/download.jpg?alt=media",
+      "harga" : "1000000",
+      "kategori" : "Tire",
+      "namaBarang" : "Pirelli Angel Scooter Tire"
+    },"150001" : {
+      "foto" : "https://firebasestorage.googleapis.com/v0/b/sibengkel-758d9.appspot.com/o/s-l300.jpg?alt=media",
+      "harga" : "2000000",
+      "kategori" : "Stop Lamp",
+      "namaBarang" : "Moto Nostra Stop Lamp Vespa Sprint"
+    }
+  },
+  "pembelians" : {
+    "-LdQE-q2mxbej-M-Ogq8" : {
+      "foto" : "https://firebasestorage.googleapis.com/v0/b/sibengkel-758d9.appspot.com/o/knalpot_kawahara_kapsul_knalpot_pdk_kapsul_.jpg?alt=media",
+      "harga" : "1500000",
+      "kategori" : "knalpot",
+      "namaBarang" : "Knanlpot Kawahara Kapsul"
+    }
+  }
+}
